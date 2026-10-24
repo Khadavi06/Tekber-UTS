@@ -1,4 +1,7 @@
-MODEL_PATH = "model/pose_landmarker_full.task"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_PATH = str(BASE_DIR / "model" / "pose_landmarker_full.task")
 
 VIS_THRESHOLD = 0.5
 SMOOTH_WINDOW = 5

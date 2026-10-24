@@ -1,11 +1,10 @@
 import argparse
 import json
-import os
 import time
 from collections import Counter
 from datetime import datetime
 import cv2
-from modul.pengaturan import EXERCISES, VIS_THRESHOLD, SMOOTH_WINDOW, ERROR_TEXT
+from modul.pengaturan import EXERCISES, VIS_THRESHOLD, SMOOTH_WINDOW, ERROR_TEXT, BASE_DIR
 from modul.deteksi_pose import PoseDetector
 from modul.geometri import Smoother
 from modul.latihan import compute_features, frame_errors, RepCounter
@@ -100,8 +99,9 @@ def main():
     summary = summarize(exercise, reps, fps)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 
-    os.makedirs("hasil", exist_ok=True)
-    path = f"hasil/sesi_{exercise}_{datetime.now():%Y%m%d_%H%M%S}.json"
+    out_dir = BASE_DIR / "hasil"
+    out_dir.mkdir(exist_ok=True)
+    path = out_dir / f"sesi_{exercise}_{datetime.now():%Y%m%d_%H%M%S}.json"
     with open(path, "w", encoding="utf-8") as fp:
         json.dump({"ringkasan": summary, "repetisi": reps}, fp, indent=2, ensure_ascii=False)
 

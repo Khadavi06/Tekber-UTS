@@ -1,0 +1,54 @@
+{
+  "ringkasan": {
+    "latihan": "Push-up",
+    "total": 5,
+    "benar": 2,
+    "salah": 3,
+    "kesalahan_terbanyak": "pushup_kurang_turun",
+    "rincian_kesalahan": {
+      "pushup_kurang_turun": 2,
+      "pinggul_naik": 1,
+      "pinggul_turun": 1
+    },
+    "fps": 15.8
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 105.6,
+      "correct": false,
+      "errors": [
+        "pushup_kurang_turun"
+      ]
+    },
+    {
+      "no": 2,
+      "min_angle": 54.5,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 62.2,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 4,
+      "min_angle": 2.0,
+      "correct": false,
+      "errors": [
+        "pinggul_naik",
+        "pinggul_turun"
+      ]
+    },
+    {
+      "no": 5,
+      "min_angle": 109.5,
+      "correct": false,
+      "errors": [
+        "pushup_kurang_turun"
+      ]
+    }
+  ]
+}

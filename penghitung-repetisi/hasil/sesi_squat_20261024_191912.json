@@ -1,0 +1,97 @@
+{
+  "ringkasan": {
+    "latihan": "Squat",
+    "total": 11,
+    "benar": 4,
+    "salah": 7,
+    "kesalahan_terbanyak": "lutut_lewat_kaki",
+    "rincian_kesalahan": {
+      "lutut_lewat_kaki": 4,
+      "squat_dangkal": 4
+    },
+    "fps": 13.7
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 49.1,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 2,
+      "min_angle": 60.5,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 35.2,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    },
+    {
+      "no": 4,
+      "min_angle": 37.5,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    },
+    {
+      "no": 5,
+      "min_angle": 118.4,
+      "correct": false,
+      "errors": [
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 6,
+      "min_angle": 119.3,
+      "correct": false,
+      "errors": [
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 7,
+      "min_angle": 118.0,
+      "correct": false,
+      "errors": [
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 8,
+      "min_angle": 125.9,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki",
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 9,
+      "min_angle": 46.8,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    },
+    {
+      "no": 10,
+      "min_angle": 54.2,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 11,
+      "min_angle": 69.4,
+      "correct": true,
+      "errors": []
+    }
+  ]
+}
