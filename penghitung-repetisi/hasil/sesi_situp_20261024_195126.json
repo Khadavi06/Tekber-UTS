@@ -1,0 +1,35 @@
+{
+  "ringkasan": {
+    "latihan": "Sit-up",
+    "total": 3,
+    "benar": 2,
+    "salah": 1,
+    "kesalahan_terbanyak": "situp_kurang_naik",
+    "rincian_kesalahan": {
+      "situp_kurang_naik": 1
+    },
+    "fps": 12.4
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 65.5,
+      "correct": false,
+      "errors": [
+        "situp_kurang_naik"
+      ]
+    },
+    {
+      "no": 2,
+      "min_angle": 42.3,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 43.1,
+      "correct": true,
+      "errors": []
+    }
+  ]
+}

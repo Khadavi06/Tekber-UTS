@@ -1,0 +1,12 @@
+{
+  "ringkasan": {
+    "latihan": "Squat",
+    "total": 0,
+    "benar": 0,
+    "salah": 0,
+    "kesalahan_terbanyak": null,
+    "rincian_kesalahan": {},
+    "fps": 0.0
+  },
+  "repetisi": []
+}

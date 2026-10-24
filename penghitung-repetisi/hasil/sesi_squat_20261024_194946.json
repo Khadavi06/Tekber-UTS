@@ -1,0 +1,35 @@
+{
+  "ringkasan": {
+    "latihan": "Squat",
+    "total": 3,
+    "benar": 2,
+    "salah": 1,
+    "kesalahan_terbanyak": "lutut_lewat_kaki",
+    "rincian_kesalahan": {
+      "lutut_lewat_kaki": 1
+    },
+    "fps": 12.4
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 99.2,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 2,
+      "min_angle": 54.0,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 66.1,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    }
+  ]
+}
