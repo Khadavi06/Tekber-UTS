@@ -1,0 +1,111 @@
+{
+  "ringkasan": {
+    "latihan": "Sit-up",
+    "total": 8,
+    "benar": 5,
+    "salah": 3,
+    "kesalahan_terbanyak": "situp_kurang_naik",
+    "rincian_kesalahan": {
+      "situp_kurang_naik": 3
+    },
+    "fps": 14.5,
+    "durasi_video_detik": 73.1
+  },
+  "sumber": "0",
+  "konfigurasi": {
+    "ambang": {
+      "name": "Sit-up",
+      "primary": "hip",
+      "rest": 110,
+      "start": 100,
+      "partial": 90,
+      "target": 65,
+      "min_plausible": 20,
+      "partial_error": "situp_kurang_naik",
+      "required": [
+        "shoulder",
+        "hip",
+        "knee",
+        "ankle"
+      ]
+    },
+    "batas_bentuk": {
+      "body_line_min": 160,
+      "torso_lean_max": 50,
+      "knee_toe_max": 0.15,
+      "situp_knee_max": 110
+    }
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 48.2,
+      "t_mulai": 17.05,
+      "t_selesai": 22.89,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 2,
+      "min_angle": 36.3,
+      "t_mulai": 25.95,
+      "t_selesai": 28.09,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 83.8,
+      "t_mulai": 34.42,
+      "t_selesai": 35.22,
+      "correct": false,
+      "errors": [
+        "situp_kurang_naik"
+      ]
+    },
+    {
+      "no": 4,
+      "min_angle": 55.6,
+      "t_mulai": 37.42,
+      "t_selesai": 41.35,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 5,
+      "min_angle": 80.9,
+      "t_mulai": 50.42,
+      "t_selesai": 51.56,
+      "correct": false,
+      "errors": [
+        "situp_kurang_naik"
+      ]
+    },
+    {
+      "no": 6,
+      "min_angle": 71.4,
+      "t_mulai": 53.19,
+      "t_selesai": 54.62,
+      "correct": false,
+      "errors": [
+        "situp_kurang_naik"
+      ]
+    },
+    {
+      "no": 7,
+      "min_angle": 47.4,
+      "t_mulai": 59.72,
+      "t_selesai": 61.32,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 8,
+      "min_angle": 54.6,
+      "t_mulai": 64.06,
+      "t_selesai": 67.33,
+      "correct": true,
+      "errors": []
+    }
+  ]
+}

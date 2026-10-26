@@ -1,0 +1,83 @@
+{
+  "ringkasan": {
+    "latihan": "Push-up",
+    "total": 4,
+    "benar": 1,
+    "salah": 3,
+    "kesalahan_terbanyak": "pushup_kurang_turun",
+    "rincian_kesalahan": {
+      "pinggul_naik": 2,
+      "pushup_kurang_turun": 3
+    },
+    "fps": 13.2,
+    "durasi_video_detik": 75.3
+  },
+  "sumber": "0",
+  "konfigurasi": {
+    "ambang": {
+      "name": "Push-up",
+      "primary": "elbow",
+      "rest": 155,
+      "start": 140,
+      "partial": 125,
+      "target": 90,
+      "min_plausible": 20,
+      "partial_error": "pushup_kurang_turun",
+      "required": [
+        "shoulder",
+        "elbow",
+        "wrist",
+        "hip",
+        "ankle"
+      ]
+    },
+    "batas_bentuk": {
+      "body_line_min": 160,
+      "torso_lean_max": 50,
+      "knee_toe_max": 0.15,
+      "situp_knee_max": 110
+    }
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 116.3,
+      "t_mulai": 46.51,
+      "t_selesai": 48.17,
+      "correct": false,
+      "errors": [
+        "pinggul_naik",
+        "pushup_kurang_turun"
+      ]
+    },
+    {
+      "no": 2,
+      "min_angle": 32.6,
+      "t_mulai": 50.67,
+      "t_selesai": 51.94,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 3,
+      "min_angle": 113.3,
+      "t_mulai": 64.14,
+      "t_selesai": 64.81,
+      "correct": false,
+      "errors": [
+        "pushup_kurang_turun"
+      ]
+    },
+    {
+      "no": 4,
+      "min_angle": 113.7,
+      "t_mulai": 68.08,
+      "t_selesai": 68.88,
+      "correct": false,
+      "errors": [
+        "pinggul_naik",
+        "pushup_kurang_turun"
+      ]
+    }
+  ]
+}

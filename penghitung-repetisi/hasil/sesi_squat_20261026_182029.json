@@ -1,0 +1,141 @@
+{
+  "ringkasan": {
+    "latihan": "Squat",
+    "total": 11,
+    "benar": 6,
+    "salah": 5,
+    "kesalahan_terbanyak": "lutut_lewat_kaki",
+    "rincian_kesalahan": {
+      "lutut_lewat_kaki": 3,
+      "squat_dangkal": 2
+    },
+    "fps": 15.3,
+    "durasi_video_detik": 179.8
+  },
+  "sumber": "0",
+  "konfigurasi": {
+    "ambang": {
+      "name": "Squat",
+      "primary": "knee",
+      "rest": 160,
+      "start": 145,
+      "partial": 135,
+      "target": 100,
+      "min_plausible": 10,
+      "partial_error": "squat_dangkal",
+      "required": [
+        "shoulder",
+        "hip",
+        "knee",
+        "ankle",
+        "foot"
+      ]
+    },
+    "batas_bentuk": {
+      "body_line_min": 160,
+      "torso_lean_max": 50,
+      "knee_toe_max": 0.15,
+      "situp_knee_max": 110
+    }
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 60.5,
+      "t_mulai": 27.3,
+      "t_selesai": 28.1,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 2,
+      "min_angle": 59.1,
+      "t_mulai": 44.3,
+      "t_selesai": 45.17,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    },
+    {
+      "no": 3,
+      "min_angle": 35.1,
+      "t_mulai": 50.44,
+      "t_selesai": 51.3,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 4,
+      "min_angle": 127.7,
+      "t_mulai": 74.44,
+      "t_selesai": 75.25,
+      "correct": false,
+      "errors": [
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 5,
+      "min_angle": 91.3,
+      "t_mulai": 81.13,
+      "t_selesai": 82.91,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 6,
+      "min_angle": 76.5,
+      "t_mulai": 85.64,
+      "t_selesai": 89.12,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 7,
+      "min_angle": 11.8,
+      "t_mulai": 96.65,
+      "t_selesai": 97.44,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 8,
+      "min_angle": 121.9,
+      "t_mulai": 139.5,
+      "t_selesai": 140.37,
+      "correct": false,
+      "errors": [
+        "squat_dangkal"
+      ]
+    },
+    {
+      "no": 9,
+      "min_angle": 72.3,
+      "t_mulai": 149.04,
+      "t_selesai": 150.5,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    },
+    {
+      "no": 10,
+      "min_angle": 92.9,
+      "t_mulai": 156.77,
+      "t_selesai": 158.9,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 11,
+      "min_angle": 57.8,
+      "t_mulai": 167.1,
+      "t_selesai": 169.31,
+      "correct": false,
+      "errors": [
+        "lutut_lewat_kaki"
+      ]
+    }
+  ]
+}

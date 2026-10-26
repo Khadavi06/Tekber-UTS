@@ -2,6 +2,9 @@ from collections import Counter
 from modul.pengaturan import EXERCISES, FORM_LIMITS, ERROR_MIN_FRAMES
 from modul.geometri import angle, angle_to_vertical, offset_from_line, dist
 
+FEATURE_NAMES = ("elbow", "shoulder", "knee", "hip", "body_line",
+                 "torso_lean", "knee_toe", "hip_offset")
+
 
 def compute_features(p):
     facing = 1 if p["foot"][0] >= p["ankle"][0] else -1
@@ -16,6 +19,12 @@ def compute_features(p):
         "hip_offset": offset_from_line(p["hip"], p["shoulder"], p["ankle"])
                       / (dist(p["shoulder"], p["hip"]) + 1e-6),
     }
+
+
+def features_plausible(exercise, f):
+    """False kalau sudut utama tidak masuk akal (mis. siku 2 derajat = landmark salah baca)."""
+    cfg = EXERCISES[exercise]
+    return cfg["min_plausible"] <= f[cfg["primary"]] <= 180.0
 
 
 def frame_errors(exercise, f):
@@ -37,24 +46,41 @@ def frame_errors(exercise, f):
 class RepCounter:
     def __init__(self, exercise):
         self.cfg = EXERCISES[exercise]
-        self.in_rep = False
         self.reps = []
+        self.restart()
+
+    def restart(self):
+        """Mulai dari nol: tunggu pengguna kembali ke posisi awal."""
+        self.ready = False        # sudah pernah berada di posisi awal (sudut >= rest)?
+        self.in_rep = False
         self.streak = Counter()
         self.min_angle = 180.0
         self.rep_errors = set()
+        self.t_start = 0.0
 
-    def update(self, f, errors):
+    def reset_streaks(self):
+        """Dipanggil setelah tracking sempat hilang sebentar."""
+        self.streak.clear()
+
+    def update(self, f, errors, t=0.0):
+        a = f[self.cfg["primary"]]
+
+        # Peringatan baru aktif setelah pengguna berada di posisi awal.
+        if a >= self.cfg["rest"]:
+            self.ready = True
+        if not self.ready:
+            errors = []
+
         for k in list(self.streak):
             if k not in errors:
                 self.streak[k] = 0
         self.streak.update(errors)
         active = [k for k, v in self.streak.items() if v >= ERROR_MIN_FRAMES]
 
-        a = f[self.cfg["primary"]]
         if not self.in_rep:
-            if a >= self.cfg["start"]:
+            if a >= self.cfg["start"] or not self.ready:
                 return None, active
-            self.in_rep, self.min_angle, self.rep_errors = True, a, set()
+            self.in_rep, self.min_angle, self.rep_errors, self.t_start = True, a, set(), t
 
         self.min_angle = min(self.min_angle, a)
         self.rep_errors.update(active)
@@ -69,6 +95,7 @@ class RepCounter:
         if self.min_angle > self.cfg["target"]:
             errs.add(self.cfg["partial_error"])
         rep = {"no": len(self.reps) + 1, "min_angle": round(self.min_angle, 1),
+               "t_mulai": round(self.t_start, 2), "t_selesai": round(t, 2),
                "correct": not errs, "errors": sorted(errs)}
         self.reps.append(rep)
         return rep, active

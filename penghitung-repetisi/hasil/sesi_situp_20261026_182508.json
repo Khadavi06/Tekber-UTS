@@ -1,0 +1,70 @@
+{
+  "ringkasan": {
+    "latihan": "Sit-up",
+    "total": 3,
+    "benar": 1,
+    "salah": 2,
+    "kesalahan_terbanyak": "situp_kurang_naik",
+    "rincian_kesalahan": {
+      "situp_kurang_naik": 1,
+      "kaki_lurus": 1
+    },
+    "fps": 15.5,
+    "durasi_video_detik": 38.4
+  },
+  "sumber": "0",
+  "konfigurasi": {
+    "ambang": {
+      "name": "Sit-up",
+      "primary": "hip",
+      "rest": 110,
+      "start": 100,
+      "partial": 90,
+      "target": 65,
+      "min_plausible": 20,
+      "partial_error": "situp_kurang_naik",
+      "required": [
+        "shoulder",
+        "hip",
+        "knee",
+        "ankle"
+      ]
+    },
+    "batas_bentuk": {
+      "body_line_min": 160,
+      "torso_lean_max": 50,
+      "knee_toe_max": 0.15,
+      "situp_knee_max": 110
+    }
+  },
+  "repetisi": [
+    {
+      "no": 1,
+      "min_angle": 49.5,
+      "t_mulai": 22.9,
+      "t_selesai": 24.5,
+      "correct": true,
+      "errors": []
+    },
+    {
+      "no": 2,
+      "min_angle": 69.1,
+      "t_mulai": 25.43,
+      "t_selesai": 27.36,
+      "correct": false,
+      "errors": [
+        "situp_kurang_naik"
+      ]
+    },
+    {
+      "no": 3,
+      "min_angle": 56.4,
+      "t_mulai": 28.7,
+      "t_selesai": 33.4,
+      "correct": false,
+      "errors": [
+        "kaki_lurus"
+      ]
+    }
+  ]
+}
